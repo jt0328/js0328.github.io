@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phone</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{margin: 0;}
+        .float-L{float: left;}
+        
+        @media screen and (max-width:600px) {
+        #all{
+            max-width: 375px;
+            height: 667px;
+            margin: auto
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            background-color: #fdf;
+            position: relative;
+            text-align: right;
+        }
+        #menu{
+            height: 50px;
+            width: 40px;
+            float: left;
+        }
+        #logo{
+            width: 60px;
+            height: 60px;            
+            background-color: #ffd;
+            position: relative;
+            top: 10px;
+            margin: auto;
+        }
+        ul.nav{
+            display: none;
+            list-style: none;
+            margin: auto;
+            padding: 0%;
+            position: relative;
+            top: -50px;
+            right: 5%;       
+        }
+        li{
+            font-size: 20px;
+            line-height: 40px;
+            display: inline;
+        }
+        .content{
+            width: 100%;
+            height: 587px;
+            position: relative;
+        }
+        .items{
+            width: 100%;
+            height: 100%;
+            background-color: #dff;
+            
+            
+        }
+        .item1{
+            width: 100%;
+            height: calc(100%/3);
+            background-color: #ffc;
+            margin:0;
+                    }
+        .item2{
+            width: 100%;
+            height: calc(100%/3);
+            background-color: #fcc;
+            margin-right: 0px;
+        }
+        .item3{
+            width: 100%;
+            height: calc(100%/3);
+            background-color: #ffc;
+            }
+        }
+        @media screen and (min-width:600px) {
+            nav{
+            width: 100%;
+            height: 100px;
+            background-color: #fdf;
+            position: relative;
+            text-align: right;
+        }
+        #logo{
+            width: 80px;
+            height: 80px;
+            
+            background-color: #ffd;
+            position: relative;
+            top: 10px;
+            left: 5%;
+        }
+        ul.nav{
+            list-style: none;
+            margin: auto;
+            padding: 0%;
+            position: relative;
+            top: -50px;
+            right: 5%;       
+        }
+        li{
+            font-size: 20px;
+            line-height: 40px;
+            display: inline;
+            
+        }
+        .content{
+            width: 100%;
+            height: 924px;
+            position: relative;
+        }
+        .items{
+            width: 90%;
+            height: 90%;
+            background-color: #dff;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            
+        }
+        .item1{
+            width: 100%;
+            height: calc(50% - 5px);
+            background-color: #ffc;
+            margin-bottom: 10px
+                    }
+        .item2{
+            width: calc(50% - 5px);
+            height:calc(50% - 5px);
+            background-color: #ffc;
+            margin-right: 10px;
+        }
+        .item3{
+            width: calc(50% - 5px);
+            height: calc(50% - 5px);
+            background-color: #ffc;
+            }
+        }
+        @media screen and (min-width:1170px) {
+            #all{
+            width: 100%;
+            height: 100vh;
+        }
+        nav{
+            width: 365px;
+            height: 100%;
+            background-color: #fdf;
+            position: relative;
+            text-align: center;
+        }
+        #logo{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            background-color: #ffd;
+            position: relative;
+            top: 105px;
+        }
+        ul.nav{
+            list-style: none;
+            margin: auto;
+            padding: 0%;
+            position: relative;
+            top: 150px;       
+        }
+        li{
+            font-size: 20px;
+            line-height: 40px;
+            display: block;
+        }
+        .content{
+            width: calc(100% - 365px);
+            height: 100%;
+            position: relative;
+        }
+        .items{
+            width: 800px;
+            height: 570px;
+            background-color: #dff;
+            position: absolute;
+            top: calc(50% - 285px);
+            left: calc(50% - 400px);
+            
+        }
+        .item1{
+            width: 100%;
+            height: calc(50% - 5px);
+            background-color: #ffc;
+            margin-bottom: 10px
+                    }
+        .item2{
+            width: calc(50% - 5px);
+            height:calc(50% - 5px);
+            background-color: #ffc;
+            margin-right: 10px;
+        }
+        .item3{
+            width: calc(50% - 5px);
+            height: calc(50% - 5px);
+            background-color: #ffc;
+            }
+        }
+        @media screen and (min-width:1360px) {
+            #all{
+            width: 100%;
+            height: 100vh;
+        }
+        nav{
+            width: 365px;
+            height: 100%;
+            background-color: #fdf;
+            position: relative;
+            text-align: center;
+        }
+        #logo{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            background-color: #ffd;
+            position: relative;
+            top: 105px;
+        }
+        ul.nav{
+            list-style: none;
+            margin: auto;
+            padding: 0%;
+            position: relative;
+            top: 150px;       
+        }
+        li{
+            font-size: 20px;
+            line-height: 40px;
+        }
+        .content{
+            width: calc(100% - 365px);
+            height: 100%;
+            position: relative;
+        }
+        .items{
+            width: 960px;
+            height: 570px;
+            background-color: #dff;
+            position: absolute;
+            top: calc(50% - 285px);
+            left: calc(50% - 480px);
+            
+        }
+        .item1{
+            width: calc((100% - 20px)/3);
+            height: 100%;
+            background-color: #ffc;
+            margin-right: 10px;
+        }
+        .item2{
+            width: calc((100% - 20px)/3);
+            height: 100%;
+            background-color: #ffc;
+            margin-right: 10px;
+        }
+        .item3{
+            width: calc((100% - 20px)/3);
+            height: 100%;
+            background-color: #ffc;
+            }
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div id="all">
+        <nav class="float-L">
+            <div id="menu">11</div>
+
+            <div id="logo"></div>
+            <ul class="nav">
+                <li>AAAAA</li>
+                <li>AAAAA</li>
+                <li>AAAAA</li>
+            </ul>
+        </nav>
+    <div class="content float-L">
+        <div class="items">
+            <div class="item1 float-L"></div>
+            <div class="item2 float-L"></div>
+            <div class="item3 float-L"></div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
