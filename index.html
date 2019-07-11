@@ -1,300 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>phone</title>
-    <style>
-        *{box-sizing: border-box;}
-        body{margin: 0;}
-        .float-L{float: left;}
-        
-        @media screen and (max-width:600px) {
-        #all{
-            max-width: 375px;
-            height: 667px;
-            margin: auto
-        }
-        nav{
-            width: 100%;
-            height: 80px;
-            background-color: #fdf;
-            position: relative;
-            text-align: right;
-        }
-        #menu{
-            height: 50px;
-            width: 40px;
-            float: left;
-        }
-        #logo{
-            width: 60px;
-            height: 60px;            
-            background-color: #ffd;
-            position: relative;
-            top: 10px;
-            margin: auto;
-        }
-        ul.nav{
-            display: none;
-            list-style: none;
-            margin: auto;
-            padding: 0%;
-            position: relative;
-            top: -50px;
-            right: 5%;       
-        }
-        li{
-            font-size: 20px;
-            line-height: 40px;
-            display: inline;
-        }
-        .content{
-            width: 100%;
-            height: 587px;
-            position: relative;
-        }
-        .items{
-            width: 100%;
-            height: 100%;
-            background-color: #dff;
-            
-            
-        }
-        .item1{
-            width: 100%;
-            height: calc(100%/3);
-            background-color: #ffc;
-            margin:0;
-                    }
-        .item2{
-            width: 100%;
-            height: calc(100%/3);
-            background-color: #fcc;
-            margin-right: 0px;
-        }
-        .item3{
-            width: 100%;
-            height: calc(100%/3);
-            background-color: #ffc;
-            }
-        }
-        @media screen and (min-width:600px) {
-            nav{
-            width: 100%;
-            height: 100px;
-            background-color: #fdf;
-            position: relative;
-            text-align: right;
-        }
-        #logo{
-            width: 80px;
-            height: 80px;
-            
-            background-color: #ffd;
-            position: relative;
-            top: 10px;
-            left: 5%;
-        }
-        ul.nav{
-            list-style: none;
-            margin: auto;
-            padding: 0%;
-            position: relative;
-            top: -50px;
-            right: 5%;       
-        }
-        li{
-            font-size: 20px;
-            line-height: 40px;
-            display: inline;
-            
-        }
-        .content{
-            width: 100%;
-            height: 924px;
-            position: relative;
-        }
-        .items{
-            width: 90%;
-            height: 90%;
-            background-color: #dff;
-            position: absolute;
-            top: 5%;
-            left: 5%;
-            
-        }
-        .item1{
-            width: 100%;
-            height: calc(50% - 5px);
-            background-color: #ffc;
-            margin-bottom: 10px
-                    }
-        .item2{
-            width: calc(50% - 5px);
-            height:calc(50% - 5px);
-            background-color: #ffc;
-            margin-right: 10px;
-        }
-        .item3{
-            width: calc(50% - 5px);
-            height: calc(50% - 5px);
-            background-color: #ffc;
-            }
-        }
-        @media screen and (min-width:1170px) {
-            #all{
-            width: 100%;
-            height: 100vh;
-        }
-        nav{
-            width: 365px;
-            height: 100%;
-            background-color: #fdf;
-            position: relative;
-            text-align: center;
-        }
-        #logo{
-            width: 150px;
-            height: 150px;
-            margin: auto;
-            background-color: #ffd;
-            position: relative;
-            top: 105px;
-        }
-        ul.nav{
-            list-style: none;
-            margin: auto;
-            padding: 0%;
-            position: relative;
-            top: 150px;       
-        }
-        li{
-            font-size: 20px;
-            line-height: 40px;
-            display: block;
-        }
-        .content{
-            width: calc(100% - 365px);
-            height: 100%;
-            position: relative;
-        }
-        .items{
-            width: 800px;
-            height: 570px;
-            background-color: #dff;
-            position: absolute;
-            top: calc(50% - 285px);
-            left: calc(50% - 400px);
-            
-        }
-        .item1{
-            width: 100%;
-            height: calc(50% - 5px);
-            background-color: #ffc;
-            margin-bottom: 10px
-                    }
-        .item2{
-            width: calc(50% - 5px);
-            height:calc(50% - 5px);
-            background-color: #ffc;
-            margin-right: 10px;
-        }
-        .item3{
-            width: calc(50% - 5px);
-            height: calc(50% - 5px);
-            background-color: #ffc;
-            }
-        }
-        @media screen and (min-width:1360px) {
-            #all{
-            width: 100%;
-            height: 100vh;
-        }
-        nav{
-            width: 365px;
-            height: 100%;
-            background-color: #fdf;
-            position: relative;
-            text-align: center;
-        }
-        #logo{
-            width: 150px;
-            height: 150px;
-            margin: auto;
-            background-color: #ffd;
-            position: relative;
-            top: 105px;
-        }
-        ul.nav{
-            list-style: none;
-            margin: auto;
-            padding: 0%;
-            position: relative;
-            top: 150px;       
-        }
-        li{
-            font-size: 20px;
-            line-height: 40px;
-        }
-        .content{
-            width: calc(100% - 365px);
-            height: 100%;
-            position: relative;
-        }
-        .items{
-            width: 960px;
-            height: 570px;
-            background-color: #dff;
-            position: absolute;
-            top: calc(50% - 285px);
-            left: calc(50% - 480px);
-            
-        }
-        .item1{
-            width: calc((100% - 20px)/3);
-            height: 100%;
-            background-color: #ffc;
-            margin-right: 10px;
-        }
-        .item2{
-            width: calc((100% - 20px)/3);
-            height: 100%;
-            background-color: #ffc;
-            margin-right: 10px;
-        }
-        .item3{
-            width: calc((100% - 20px)/3);
-            height: 100%;
-            background-color: #ffc;
-            }
-        }
+    <title>Good Will Hunting</title>
+    <link rel="stylesheet" href="style.css">
 
-
-    
-    </style>
 </head>
-<body>
-    <div id="all">
-        <nav class="float-L">
-            <div id="menu">11</div>
 
-            <div id="logo"></div>
-            <ul class="nav">
-                <li>AAAAA</li>
-                <li>AAAAA</li>
-                <li>AAAAA</li>
-            </ul>
-        </nav>
-    <div class="content float-L">
-        <div class="items">
-            <div class="item1 float-L"></div>
-            <div class="item2 float-L"></div>
-            <div class="item3 float-L"></div>
+<body>
+    <div id="banner"></div>
+    <nav class="nav">
+        <a href="#story">
+            <div class="menu item1">
+                <h3>劇情簡介</h3>
+            </div>
+        </a>
+        <a href="#info">
+            <div class="menu item2">
+                <h3>電影資訊</h3>
+            </div>
+        </a>
+        <a href="#trailer">
+            <div class="menu item3">
+                <h3>預告片</h3>
+            </div>
+        </a>
+        <a href="#cast">
+            <div class="menu item4">
+                <h3>角色介紹</h3>
+            </div>
+        </a>
+    </nav>
+    <section id="story">
+        <div class="content">
+            <h2>劇情簡介</h2>
+            <p>任教於麻省理工學院數學系的菲爾茲數學獎得主吉拉德·藍伯教授在他系上的公布欄寫下一道他覺得十分困難的題目，希望他那些傑出的學生能解開答案，可是卻無人能解。結果一個年輕的清潔工威爾·杭汀卻在下課打掃時，發現了這道數學題，並輕易的解開這個難題。藍伯得知有人解開他的問題之後，又下了另一道更難的題目，要找出這個數學天才。
+            </p>
+
+            <P>威爾聰明絕頂卻叛逆不羈，成天和好朋友查克·蘇理凡等人四處閒逛，打架滋事。當藍伯找到這個天才的時候，他正因為打架襲警而被少年法庭宣判送進少年觀護所。藍伯向法官求情保釋，才讓威爾免受牢獄之災。藍伯為了讓威爾找到自己的人生目標，不浪費他的數學天賦，請了很多心理學家為威爾做輔導，但是威爾十分抗拒，而輔導威爾的心理學家們都被威爾洞悉心理而遭到羞辱，紛紛宣告威爾已「無藥可救」。與此同時，威爾在因緣際會下認識了一名哈佛女大生史凱拉，並與其交往，然而由於自身背景產生的自卑感，使他無法掏心面對史凱拉，致使兩人感情始終無法更進一步。
+            </P>
+
+            <p>藍伯在無計可施的情況下，只好向他的大學同學及好友心理學教授西恩·麥奎爾求助，希望西恩能夠幫助威爾打開心房，將威爾導正成他所期待的傳統典型。在西恩的努力下，兩人由最初的相互攻防對峙轉化成探索內心啟發的友誼，而在彼此心靈激盪影響之下，西恩走出了喪妻之痛，而威爾也因此漸漸敞開心胸，走出了孤獨的陰影，實現自我並追求真愛。
+            </p>
         </div>
-    </div>
-    </div>
-    
+    </section>
+    <section id="info">
+        <div class="content">
+            <div class="info_left"><img src="pic/Good-Will-Hunting_poster.jpg" alt="" width="400px"></div>
+            <div class="info_right">
+                <!-- <ul>
+                    <li>片　　名：心靈捕手 (Good Will Hunting)</li>
+                    <li>主　　題：學術知識與生命體驗、信任與利用、生命成長。</li>
+                    <li>導　　演：葛斯．范桑 (Gus Van Sant)</li>
+                    <li>演　　員：麥特．戴蒙 (Matt Damon)、羅賓．威廉斯 (Robin Williams)、班．艾佛列克 (Ben Affleck)</li>
+                    <li>片　　長：127分鐘</li>
+                    <li>出品年代：1997年</li>
+                    <li>得獎記錄：奧斯卡最佳男配角獎與原著劇本獎、金球獎最佳編劇獎</li>
+                </ul> -->
+                <table>
+                    <tr>
+                        <td width="120">片　　名：</td>
+                        <td>心靈捕手 (Good Will Hunting)</td>
+                    </tr>
+                    <tr>
+                        <td>主　　題：</td>
+                        <td>學術知識與生命體驗、信任與利用、生命成長。</td>
+                    </tr>
+                    <tr>
+                        <td>導　　演：</td>
+                        <td>葛斯．范桑 (Gus Van Sant)</td>
+                    </tr>
+                    <tr>
+                        <td>演　　員：</td>
+                        <td>麥特．戴蒙 (Matt Damon)、羅賓．威廉斯 (Robin Williams)、班．艾佛列克 (Ben Affleck)</td>
+                    </tr>
+                    <tr>
+                        <td>片　　長：</td>
+                        <td>127分鐘</td>
+                    </tr>
+                    <tr>
+                        <td>出品年代：</td>
+                        <td>1997年</td>
+                    </tr>
+                    <tr>
+                        <td>得獎記錄：</td>
+                        <td>奧斯卡最佳男配角獎與原著劇本獎、金球獎最佳編劇獎</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="trailer">
+        <div class="content">
+            <div class="trailer_left">
+                <p>You don’t know about real loss cause that only occurs when you love something more than you love
+                    yourself. I doubt you’ve ever dared to love anybody that much.</p>
+            </div>
+
+            <div class="youtube"><iframe width="854" height="480" src="https://www.youtube.com/embed/FGVovG7Kt6E"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+        </div>
+    </section>
+    <section id="cast">
+        <div class="content">
+            <div class="cast_left">
+                <h4>威爾·杭汀Will Hunting</h4>
+                <p>麻省理工大學的清潔工，有驚人的數學天分，但是個問題少年。在教授桑恩和朋友查克的幫助下，最終把心靈打開，消除了人際隔閡，並找回了自我和愛情。</p>
+            </div>
+            <div class="cast_right">
+                <h4>西恩·麥奎爾Sean Maguire</h4>
+                <p>遍嚐人生甘苦而擁有豐富情感經驗的心理醫生桑恩，由於他的努力不懈，威爾才能敞開心扉。自己也在幫助威爾的工作中重新找到了人生的意義，走出了喪妻的陰影，滿懷信心地準備迎接新的未來。</p>
+            </div>
+        </div>
+    </section>
+    <footer>copyright</footer>
+
+
+
 </body>
+
 </html>
