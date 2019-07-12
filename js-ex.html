@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .img_group{
+            width: 800px;
+        }
+        .top_img{
+            width: 100%;
+        }
+        .btm_img{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .img_block{
+            width: 24%;
+        }
+        .btm_img img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="img_group">
+        <div class="top_img"><img id="bigimg" src="http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg" alt=""></div>
+        <div class="btm_img">
+            <div class="img_block" id="pic_1"><img src="http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg" alt=""></div>
+            <div class="img_block" id="pic_2"><img src="https://i.kinja-img.com/gawker-media/image/upload/s--HqfzgkTd--/c_scale,f_auto,fl_progressive,q_80,w_800/wp2qinp6fu0d8guhex9v.jpg" alt=""></div>
+            <div class="img_block" id="pic_3"><img src="https://media.familyminded.com/ce/39/ce39903185b44964b9db839467e92260.jpg" alt=""></div>
+            <div class="img_block" id="pic_4"><img src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2016/03/10093020/dog-products-for-spring-800x600.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <script>
+        var pic_1 = document.querySelector("#pic_1");
+        var pic_2 = document.querySelector("#pic_2");
+        var pic_3 = document.querySelector("#pic_3");
+        var pic_4 = document.querySelector("#pic_4");
+        var bigimg = document.querySelector("#bigimg");
+
+        pic_1.onclick = function (){
+            bigimg.src = "http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg";
+        }
+        pic_2.onclick = function (){
+            bigimg.src = "https://i.kinja-img.com/gawker-media/image/upload/s--HqfzgkTd--/c_scale,f_auto,fl_progressive,q_80,w_800/wp2qinp6fu0d8guhex9v.jpg";
+        }
+        pic_3.onclick = function (){
+            bigimg.src = "https://media.familyminded.com/ce/39/ce39903185b44964b9db839467e92260.jpg";
+        }
+        pic_4.onclick = function (){
+            bigimg.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2016/03/10093020/dog-products-for-spring-800x600.jpg";
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -99,10 +99,11 @@
                 <p>You don’t know about real loss cause that only occurs when you love something more than you love
                     yourself. I doubt you’ve ever dared to love anybody that much.</p>
             </div>
+            <div id="muteYouTubeVideoPlayer"></div>
 
-            <div class="youtube"><iframe width="854" height="480" src="https://www.youtube.com/embed/FGVovG7Kt6E"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
+            <!-- <div class="youtube"><iframe width="854" height="480" src="https://www.youtube.com/embed/FGVovG7Kt6E?&autoplay=1&controls=0&showinfo=0&autohide=0"
+                    frameborder="0" allow="accelerometer; autoplay ; encrypted-media; gyroscope; picture-in-picture;"
+                    allowfullscreen volumn="0"></iframe></div> -->
         </div>
     </section>
     <section id="cast">
@@ -119,6 +120,8 @@
     </section>
     <footer>copyright</footer>
 
+    <script async src="https://www.youtube.com/iframe_api"></script>
+
     <script>
         var nav_class = document.querySelector(".navbar")
         var banner_height = document.querySelector("#banner").clientHeight
@@ -131,12 +134,40 @@
             var scroll_top = window.scrollY;
             if (window.scrollY > banner_height) {
                 nav_class.style.position = "fixed";
+                nav_class.style.zIndex = 99;
             } else {
                 nav_class.style.position = "static";
             }
             console.log(scroll_top > 50);
         }
-        window.addEventListener('scroll',nav_fixed);
+        window.addEventListener('scroll', nav_fixed);
+
+
+        // 以下控制youtube
+        function onYouTubeIframeAPIReady() {
+            var player;
+            player = new YT.Player('muteYouTubeVideoPlayer', {
+                videoId: 'FGVovG7Kt6E', // YouTube 影片ID
+                width: 854, // 播放器寬度 (px)
+                height: 480, // 播放器高度 (px)
+                playerVars: {
+                    autoplay: 1, // 在讀取時自動播放影片
+                    controls: 1, // 在播放器顯示暫停／播放按鈕
+                    showinfo: 1, // 隱藏影片標題
+                    modestbranding: 0, // 隱藏YouTube Logo
+                    loop: 1, // 讓影片循環播放
+                    fs: 0, // 隱藏全螢幕按鈕
+                    cc_load_policty: 1, // 隱藏字幕
+                    iv_load_policy: 3, // 隱藏影片註解
+                    autohide: 1 // 當播放影片時隱藏影片控制列
+                },
+                events: {
+                    onReady: function (e) {
+                        e.target.mute();
+                    }
+                }
+            });
+        }
     </script>
 
 
