@@ -49,7 +49,7 @@
     </section>
     <section id="info">
         <div class="content">
-            <div class="info_left"><img src="pic/Good-Will-Hunting_poster.jpg" alt=""  height = 90%></div>
+            <div class="info_left"><img src="pic/Good-Will-Hunting_poster.jpg" alt="" height=90%></div>
             <div class="info_right">
                 <!-- <ul>
                     <li>片　　名：心靈捕手 (Good Will Hunting)</li>
@@ -120,13 +120,25 @@
     <footer>copyright</footer>
 
     <script>
-    var nav_class = document.getElementsByClassName("navbar")
+        var nav_class = document.querySelector(".navbar")
+        var banner_height = document.querySelector("#banner").clientHeight
 
-    console.log(nav_class);
+        // var scroll_top = scrollTop()
 
+        console.log(banner_height);
 
-    
+        function nav_fixed() {
+            var scroll_top = window.scrollY;
+            if (window.scrollY > banner_height) {
+                nav_class.style.position = "fixed";
+            } else {
+                nav_class.style.position = "static";
+            }
+            console.log(scroll_top > 50);
+        }
+        window.addEventListener('scroll',nav_fixed);
     </script>
+
 
 
 
