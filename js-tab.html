@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #tabs{
+        #tabs {
             width: 600px;
             height: 600px;
+            padding: 50px;
+            background-color: #5297f1;
         }
-        .tags{
+
+        .tags {
+            width: 350px ;
             height: 50px;
             display: flex;
         }
-                
-        .tab{height: 550px;}
-        .tab div{height: 100%;}
-        .hod{display: none}
-        .show{display: block}
+        .tags div{
+            line-height: 50px;
+            width: 100px;
+            border-radius: 3px 3px 0 0;
+            margin: 0 10px;  
+            background-color: #7fb3f7;          
+        }
+
+        .tab {
+            height: 550px;
+        }
+
+        .tab div {
+            height: 100%;
+            background-color: rgb(161, 249, 252);
+            
+        }
+
+        .highlight {
+            background-color: rgb(161, 249, 252);
+        }
+
+        .show {
+            display: block
+        }
     </style>
 
 </head>
+
 <body>
     <div id="tabs">
         <div class="tags">
@@ -30,10 +56,39 @@
             <div id="tag3">tab3</div>
         </div>
         <div class="tab">
-            <div id="tab1" class="tab hod">123</div>
-            <div id="tab2" class="tab show">123</div>
-            <div id="tab3" class="tab hod">123</div>
+            <div id="tab1" class="tab">這是tab1</div>
+            <div id="tab2" class="tab">這是tab2</div>
+            <div id="tab3" class="tab">這是tab3</div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#tag1").click(function () {
+                    $(".tab>div").hide();
+                    $(".tags>div").removeClass("highlight");
+                    $("#tab1").show();
+                    $("#tag1").addClass("highlight")
+                });
+                $("#tag2").click(function () {
+                    $(".tab>div").hide();
+                    $(".tags>div").removeClass("highlight");
+                    $("#tab2").show();
+                    $("#tag2").addClass("highlight")
+                });
+                $("#tag3").click(function () {
+                    $(".tab>div").hide();
+                    $(".tags>div").removeClass("highlight");
+                    $("#tab3").show();
+                    $("#tag3").addClass("highlight")
+                });
+            });
+        </script>
     </div>
+
+
 </body>
+
 </html>
