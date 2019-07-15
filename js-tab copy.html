@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tabs {
+            width: 600px;
+            height: 600px;
+            padding: 50px;
+            background-color: #5297f1;
+        }
+
+        .tags {
+            width: 350px;
+            height: 50px;
+            display: flex;
+        }
+
+        .tags div {
+            line-height: 50px;
+            width: 100px;
+            border-radius: 5px 5px 0 0;
+            margin-left:  10px;
+            background-color: #89bcfd;
+            text-align: center;
+
+        }
+
+        .tab {
+            height: 550px;
+        }
+
+        .tab div {
+            height: 100%;
+            background-color: rgb(161, 249, 252);
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            top: 0%;
+            display: none;
+        }
+
+        .tab :nth-child(1) {
+            display: block
+        }
+
+        .tags .highlight {
+            background-color: rgb(161, 249, 252);
+        }
+
+        .show {
+            display: block
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="tabs">
+        <div class="tags">
+            <div id="tag1" class="highlight">tab1</div>
+            <div id="tag2">tab2</div>
+            <div id="tag3">tab3</div>
+        </div>
+        <div class="tab">
+            <div id="tab1" >這是tab1</div>
+            <div id="tab2" >這是tab2</div>
+            <div id="tab3" >這是tab3</div>
+        </div>
+        
+    </div>
+    <button id="btn1">Append tab</button>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script>
+
+            $("#btn1").click(function () {
+                $(".tab").append("<div >這是new tab</div>");
+                $(".tags").append("<div >new</div>");
+            });
+
+            var btn_ary = $(".tags>div")
+            var tab_ary = $(".tab>div")
+            console.log(btn_ary);
+
+            for (let index = 0; index < btn_ary.length; index++) {
+                const btn = btn_ary[index];
+                const tab_content = tab_ary[index];
+                // console.log(tab_content);
+                btn.onclick = function () {
+                    console.log(tab_content);
+                    tab_ary.hide();
+                    btn_ary.removeClass("highlight");
+                    $(tab_content).show();
+                    $(btn).addClass("highlight");
+                }
+            }
+            
+            // $(document).ready(function () {
+            //     $("#tag1").click(function () {
+            //         $(".tab>div").hide();
+            //         $(".tags>div").removeClass("highlight");
+            //         $("#tab1").show();
+            //         $("#tag1").addClass("highlight")
+            //     });
+            //     $("#tag2").click(function () {
+            //         $(".tab>div").hide();
+            //         $(".tags>div").removeClass("highlight");
+            //         $("#tab2").show();
+            //         $("#tag2").addClass("highlight")
+            //     });
+            //     $("#tag3").click(function () {
+            //         $(".tab>div").hide();
+            //         $(".tags>div").removeClass("highlight");
+            //         $("#tab3").show();
+            //         $("#tag3").addClass("highlight")
+            //     });
+            // });
+        </script>
+
+
+</body>
+
+</html>

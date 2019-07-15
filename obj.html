@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="top">
+            <img id="image" src="" alt="">
+        </div>
+        <div class="bottm">
+            <h1 id="title"></h1>
+            <p id="content"></p>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script> -->
+    <script>
+        var obj = {
+            imgs: "https://img.shopping.friday.tw/images/product/105/3169382/3169382_3.jpg",
+            name: "日式綠茶",
+            ingredient: "水、茶葉",
+            capacity: 550,
+            caffeine: 10,
+            Calories: 0,
+        };
+        var image = document.querySelector("#image");
+        var title = document.querySelector("#title");
+        var content = document.querySelector("#content");
+        image.src= obj.imgs;
+        title.innerHTML = obj.name;
+        content.innerHTML = obj.ingredient;
+
+
+    </script>
+
+</body>
+
+</html>
