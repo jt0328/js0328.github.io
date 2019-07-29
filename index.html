@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Good Will Hunting</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -35,7 +38,7 @@
         </a>
     </nav>
     <section id="story">
-        <div class="content">
+        <div class="content" data-aos="zoom-in-up" data-aos-duration="1000">
             <h2>劇情簡介</h2>
             <p>任教於麻省理工學院數學系的菲爾茲數學獎得主吉拉德·藍伯教授在他系上的公布欄寫下一道他覺得十分困難的題目，希望他那些傑出的學生能解開答案，可是卻無人能解。結果一個年輕的清潔工威爾·杭汀卻在下課打掃時，發現了這道數學題，並輕易的解開這個難題。藍伯得知有人解開他的問題之後，又下了另一道更難的題目，要找出這個數學天才。
             </p>
@@ -50,7 +53,7 @@
     <section id="info">
         <div class="content">
             <div class="info_left"><img src="pic/Good-Will-Hunting_poster.jpg" alt="" height=90%></div>
-            <div class="info_right">
+            <div class="info_right" data-aos="flip-left">
                 <!-- <ul>
                     <li>片　　名：心靈捕手 (Good Will Hunting)</li>
                     <li>主　　題：學術知識與生命體驗、信任與利用、生命成長。</li>
@@ -99,7 +102,7 @@
                 <p>You don’t know about real loss cause that only occurs when you love something more than you love
                     yourself. I doubt you’ve ever dared to love anybody that much.</p>
             </div>
-            <div id="muteYouTubeVideoPlayer"></div>
+            <div id="muteYouTubeVideoPlayer" data-aos="zoom-in-up" data-aos-duration="1000"></div>
 
             <!-- <div class="youtube"><iframe width="854" height="480" src="https://www.youtube.com/embed/FGVovG7Kt6E?&autoplay=1&controls=0&showinfo=0&autohide=0"
                     frameborder="0" allow="accelerometer; autoplay ; encrypted-media; gyroscope; picture-in-picture;"
@@ -120,9 +123,16 @@
     </section>
     <footer>copyright</footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script async src="https://www.youtube.com/iframe_api"></script>
+ 
 
     <script>
+        AOS.init();//aos初始化
         var nav_class = document.querySelector(".navbar")
         var banner_height = document.querySelector("#banner").clientHeight
 
