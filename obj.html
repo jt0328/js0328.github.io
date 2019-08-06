@@ -20,9 +20,9 @@
         </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script> -->
+    </script>
     <script>
         var obj = {
             imgs: "https://img.shopping.friday.tw/images/product/105/3169382/3169382_3.jpg",
@@ -32,11 +32,11 @@
             caffeine: 10,
             Calories: 0,
         };
-        var image = document.querySelector("#image");
-        var title = document.querySelector("#title");
-        var content = document.querySelector("#content");
-        image.src= obj.imgs;
-        title.innerHTML = obj.name;
+        var image = $("#image");
+        var title = $("#title");
+        var content = $("#content");
+        // image.src (obj.imgs);
+        title.HTML(obj.name);
         content.innerHTML = obj.ingredient;
 
 

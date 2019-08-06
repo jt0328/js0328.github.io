@@ -24,7 +24,7 @@
             line-height: 50px;
             width: 100px;
             border-radius: 5px 5px 0 0;
-            margin-left:  10px;
+            margin-left: 10px;
             background-color: #89bcfd;
             text-align: center;
 
@@ -67,62 +67,72 @@
             <div id="tag3">tab3</div>
         </div>
         <div class="tab">
-            <div id="tab1" >這是tab1</div>
-            <div id="tab2" >這是tab2</div>
-            <div id="tab3" >這是tab3</div>
+            <div id="tab1">這是tab1</div>
+            <div id="tab2">這是tab2</div>
+            <div id="tab3">這是tab3</div>
         </div>
-        
+
     </div>
     <button id="btn1">Append tab</button>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-        <script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script>
+        $("#btn1").click(function () {
+            $(".tab").append("<div >這是new tab</div>");
+            $(".tags").append("<div >new</div>");
+            // let btn_ary = $(".tags>div");
+            // let tab_ary = $(".tab>div");
+            $(test1());
 
-            $("#btn1").click(function () {
-                $(".tab").append("<div >這是new tab</div>");
-                $(".tags").append("<div >new</div>");
-            });
 
-            var btn_ary = $(".tags>div")
-            var tab_ary = $(".tab>div")
-            console.log(btn_ary);
+        });
 
-            for (let index = 0; index < btn_ary.length; index++) {
-                const btn = btn_ary[index];
-                const tab_content = tab_ary[index];
-                // console.log(tab_content);
-                btn.onclick = function () {
-                    console.log(tab_content);
-                    tab_ary.hide();
-                    btn_ary.removeClass("highlight");
-                    $(tab_content).show();
-                    $(btn).addClass("highlight");
+        $(document).ready(test1) //開啟執行function test1
+                
+        function test1 (){
+            let btn_ary = $(".tags>div");
+            let tab_ary = $(".tab>div");
+            console.log(btn_ary)
+
+                for (let index = 0; index < btn_ary.length; index++) {
+                        
+                    const btn = btn_ary[index];
+                    const tab_content = tab_ary[index];
+
+                    // console.log(tab_content);
+                    btn.onclick = function () {
+                        console.log(tab_content);
+                        tab_ary.hide();
+                        btn_ary.removeClass("highlight");
+                        $(tab_content).show();
+                        $(btn).addClass("highlight");
+                    }
                 }
-            }
-            
-            // $(document).ready(function () {
-            //     $("#tag1").click(function () {
-            //         $(".tab>div").hide();
-            //         $(".tags>div").removeClass("highlight");
-            //         $("#tab1").show();
-            //         $("#tag1").addClass("highlight")
-            //     });
-            //     $("#tag2").click(function () {
-            //         $(".tab>div").hide();
-            //         $(".tags>div").removeClass("highlight");
-            //         $("#tab2").show();
-            //         $("#tag2").addClass("highlight")
-            //     });
-            //     $("#tag3").click(function () {
-            //         $(".tab>div").hide();
-            //         $(".tags>div").removeClass("highlight");
-            //         $("#tab3").show();
-            //         $("#tag3").addClass("highlight")
-            //     });
-            // });
-        </script>
+        }
+
+        // $(document).ready(function () {
+        //     $("#tag1").click(function () {
+        //         $(".tab>div").hide();
+        //         $(".tags>div").removeClass("highlight");
+        //         $("#tab1").show();
+        //         $("#tag1").addClass("highlight")
+        //     });
+        //     $("#tag2").click(function () {
+        //         $(".tab>div").hide();
+        //         $(".tags>div").removeClass("highlight");
+        //         $("#tab2").show();
+        //         $("#tag2").addClass("highlight")
+        //     });
+        //     $("#tag3").click(function () {
+        //         $(".tab>div").hide();
+        //         $(".tags>div").removeClass("highlight");
+        //         $("#tab3").show();
+        //         $("#tag3").addClass("highlight")
+        //     });
+        // });
+    </script>
 
 
 </body>

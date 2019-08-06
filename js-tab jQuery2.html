@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tabs {
+            width: 600px;
+            height: 600px;
+            padding: 50px;
+            background-color: #5297f1;
+        }
+
+        .tags {
+            width: 350px;
+            height: 50px;
+            display: flex;
+        }
+
+        .tags div {
+            line-height: 50px;
+            width: 100px;
+            border-radius: 5px 5px 0 0;
+            margin-left: 10px;
+            background-color: #89bcfd;
+            text-align: center;
+
+        }
+
+        
+
+        .tab {
+            height: 550px;
+            background-color: rgb(161, 249, 252);
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            top: 0%;
+            display: none;
+        }
+
+        .tabs :nth-child(1) {
+            display: block
+        }
+
+        .tags .highlight {
+            background-color: rgb(161, 249, 252);
+        }
+
+        .show {
+            display: block
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="tabs">
+        <div class="tags">
+            <div id="tag1" class="highlight" data-tabid="1">tab1</div>
+            <div id="tag2" data-tabid="2">tab2</div>
+            <div id="tag3" data-tabid="3">tab3</div>
+        </div>
+        <div class="tabs">
+            <div class="tab" data-tabid="1">這是tab1</div>
+            <div class="tab" data-tabid="2">這是tab2</div>
+            <div class="tab" data-tabid="3">這是tab3</div>
+        </div>
+
+    </div>
+    <button id="btn1">Append tab</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script>
+        $("#btn1").click(function () {
+            var last_child= document.querySelector(".tags div:last-child");
+            console.log(last_child);
+                      
+            var newtabid = last_child.dataset.tabid;
+            console.log(newtabid);
+            new_tabid = Number(newtabid) + 1;
+            console.log(new_tabid);
+            $(".tabs").append(`<div class="tab" data-tabid="${new_tabid}">這是tab${new_tabid}</div>`);
+            $(".tags").append(`<div data-tabid="${new_tabid}">tab${new_tabid}</div>`);
+            // let btn_ary = $(".tags>div");
+            // let tab_ary = $(".tab>div");
+            $(test1());
+        });
+
+        $(document).ready(test1)
+
+        function test1(){btn=$(".tags>div")
+        btn.click(
+            function () {
+                var tabid = this.dataset.tabid;
+                console.log(tabid);
+                btn.removeClass("highlight")
+                $(this).addClass("highlight");
+                $(".tab").hide();
+
+                $(".tab[data-tabid="+tabid+"]").show()
+                
+                
+            }
+        )}
+
+        
+                
+        // localStorage.setItem("TechARide","TAR");
+        console.log(localStorage.getItem("TechARide"));
+    </script>
+
+
+</body>
+
+</html>
